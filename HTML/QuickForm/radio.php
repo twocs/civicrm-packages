@@ -77,7 +77,7 @@ class HTML_QuickForm_radio extends HTML_QuickForm_input
         // $this->_generateId();
         if ( ! $this->getAttribute('id') ) {
             //hack to add 'id' for radio
-            static $idTextStr = 1;
+            $idTextStr = random_int(1, PHP_INT_MAX);
             if (!empty($attributes['id_suffix'])) {
               $idSuffix =  $attributes['id_suffix'];
               $this->removeAttribute('id_suffix');
